@@ -2,7 +2,7 @@ fastapi==0.111.1
 uvicorn[standard]==0.23.2
 pydantic==2.6.1
 slowapi==0.1.5
-python-multipart==0.0.6
+python-multipart>=0.0.7
 pypdf==3.16.0
 docx2txt==0.8
 httpx==0.26.0
