@@ -294,3 +294,14 @@ async def score_match(
         ats_hints=ATS_HINTS,
         explainability=explainability
     )
+
+@app.get("/v1/health")
+async def health_check():
+    uptime = round(time.time() - START_TIME, 2)
+    return {
+        "status": "healthy",
+        "service": "resume-match-api",
+        "version": "1.0.0",
+        "uptime_seconds": uptime,
+        "timestamp": datetime.utcnow().isoformat() + "Z"
+    }
